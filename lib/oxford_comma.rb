@@ -1,9 +1,12 @@
 def oxford_comma(array)
   result = array[0]
-  array.each_with_index { |word, index|
-    if index != 0
-      index != array.length-1 ? result << ", #{word}" : result << ", and #{word}"
-    end
+  if array.length == 2
+    result = "#{array[0]} and #{array[1]}"
+  else
+    array.each_with_index { |word, index|
+      if index != 0
+        index != array.length-1 ? result << ", #{word}" : result << ", and #{word}"
+      end
   }
   return result
 end
