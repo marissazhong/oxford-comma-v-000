@@ -7,7 +7,8 @@ def oxford_comma(array)
       if index != 0
         index != array.length-1 ? result << ", #{word}" : result << ", and #{word}"
       end
-  }
+    }
+  end
   return result
 end
 
